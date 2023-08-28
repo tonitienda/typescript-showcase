@@ -1,0 +1,23 @@
+{
+  "name": "typescript-showcase",
+  "version": "1.0.0",
+  "description": "## History",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonitienda/typescript-showcase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonitienda/typescript-showcase/issues"
+  },
+  "homepage": "https://github.com/tonitienda/typescript-showcase#readme",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
