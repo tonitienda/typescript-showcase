@@ -2,7 +2,7 @@ import {
   getTestCasesByTestCycleId,
   getTestRunsByTestCycleId,
   lockTestRuns,
-} from "./api";
+} from "../api";
 import { readFile } from "fs";
 import path from "path";
 

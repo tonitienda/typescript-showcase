@@ -2,17 +2,16 @@ import {
   getTestCasesByTestCycleId,
   getTestRunsByTestCycleId,
   lockTestRuns,
-} from "./api";
+} from "../api";
 import { readFile } from "fs/promises";
 import path from "path";
 
 async function execute() {
   const data = await readFile(path.resolve("pipeline.json"));
 
-  const testcycleIds = JSON.parse(data.toString())["pipelines"][
-    "hils"
-  ] as number[];
-  testcycleIds.forEach(async (testcycleId) => {
+  const testcycleIds = JSON.parse(data.toString())["pipelines"]["hils"];
+
+  for (const testcycleId of testcycleIds) {
     console.log("TestCycleId:", testcycleId);
 
     const testruns = await getTestRunsByTestCycleId(12345);
@@ -23,7 +22,7 @@ async function execute() {
 
     const testcases = await getTestCasesByTestCycleId(12345);
     console.log(testcases);
-  });
+  }
 }
 
 execute().then(() => console.log("\nDone!!!\n"));
